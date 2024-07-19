@@ -49,7 +49,7 @@ function ComplexSphere() {
       const scale = 1 + Math.sin(time * 2 + x + y + z) * 0.2;
 
       linePositions[i6] = x * scale;
-      linePositions[i6 + 1] = y * scale;
+      linePositions[6 + 1] = y * scale;
       linePositions[i6 + 2] = z * scale;
     }
 
@@ -64,10 +64,10 @@ function ComplexSphere() {
             attach="attributes-position"
             count={particlesCount}
             array={positions}
-            itemSize={5} //Make it 3 for getting the circle
+            itemSize={3}
           />
         </bufferGeometry>
-        <pointsMaterial size={.002} color="green" />
+        <pointsMaterial size={0.02} color="#00ffff" />
       </points>
       <lineSegments ref={lineRef}>
         <bufferGeometry>
@@ -78,7 +78,7 @@ function ComplexSphere() {
             itemSize={3}
           />
         </bufferGeometry>
-        <lineBasicMaterial color="rgb(0, 255, 0)" opacity={.4} transparent />
+        <lineBasicMaterial color="#0080ff" opacity={0.3} transparent />
       </lineSegments>
     </group>
   );
