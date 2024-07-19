@@ -7,7 +7,7 @@ function ComplexSphere() {
   const lineRef = useRef();
 
   const particlesCount = 3000;
-  const radius = 1;
+  const radius = .8;
 
   const positions = useMemo(() => {
     const positions = new Float32Array(particlesCount * 3);
@@ -67,7 +67,7 @@ function ComplexSphere() {
             itemSize={3}
           />
         </bufferGeometry>
-        <pointsMaterial size={0.02} color="#00ffff" />
+        <pointsMaterial size={0.02} color="#fff" />
       </points>
       <lineSegments ref={lineRef}>
         <bufferGeometry>
@@ -78,7 +78,7 @@ function ComplexSphere() {
             itemSize={3}
           />
         </bufferGeometry>
-        <lineBasicMaterial color="#0080ff" opacity={0.3} transparent />
+        <lineBasicMaterial color="#0080ff" opacity={0} transparent />
       </lineSegments>
     </group>
   );
